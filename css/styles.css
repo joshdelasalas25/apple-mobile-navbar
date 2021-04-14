@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html {
+	background: #fafafa;
+	font-family: Roboto, sans-serif;
+}
+
+body {
+	margin: 0;
+}
+
+*,
+::after,
+::before {
+	box-sizing: inherit;
+}
+
+/* Navbar General */
+nav {
+	margin: 0;
+	overflow: hidden;
+	background: #010101;
+	transition: 0.3s;
+}
+
+.nav-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 50px;
+	max-width: 1024px;
+	margin: 0 auto;
+	padding: 0 13px;
+}
+
+.nav-container a {
+	display: block;
+	font-size: 14px;
+	line-height: 50px;
+	text-decoration: none;
+	transition: all 0.3s;
+	color: #ffffff;
+}
+
+.nav-container a:hover,
+.nav-menu-btn:hover,
+.nav-icons:hover {
+	opacity: 0.7;
+}
+
+/* Nav menu button */
+.nav-menu-btn {
+	display: none;
+	grid-gap: 5px;
+	grid-template-columns: auto;
+	padding: 20px 5px;
+	height: 10px;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+.bar {
+	height: 1.5px;
+	width: 20px;
+	background: white;
+	transition: 0.5s;
+}
+
+/* main menu animation */
+.show-menu .one {
+	transform: rotate(45deg) translateY(5.5px);
+}
+
+.show-menu .two {
+	transform: rotate(-45deg) translateY(-5.5px);
+}
+
+/* Logo */
+.logo {
+	height: 50px;
+}
+
+.fa-apple {
+	position: relative;
+	/* Adjust these values accordingly */
+	top: 2px;
+}
+
+h2 {
+	display: inline-block;
+	font-size: 18px;
+	font-family: Roboto, sans-serif;
+}
+
+/* Nav Elements Hidden */
+.nav-menu {
+	display: none;
+}
+
+.nav-sub-menu {
+	display: none;
+}
+
+.fa-plus,
+.fa-angle-down {
+	display: none;
+}
+
+/* Icons: Search and Notification */
+.nav-icons {
+	cursor: pointer;
+	transition: all 0.3s;
+	padding: 12px 0px;
+	display: inline-block;
+	text-decoration: none;
+	transition: all 0.3s;
+}
+
+.fa {
+	font-size: 25px;
+	color: white;
+}
+
+.fa-search {
+	padding-right: .5rem;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+
+	/* Main Menu */
+	.show-menu {
+		background-color: #000000;
+	}
+
+	.show-menu .nav-item {
+		line-height: 50px;
+		border-bottom: 1px solid #333;
+		display: inline-flex;
+		align-items: center;
+	}
+
+	.talent,
+	.connection,
+	.intelligence,
+	.workspace,
+	.insights {
+		justify-content: space-between;
+	}
+
+	.nav-menu,
+	.nav-submenu {
+		width: 100%;
+		background: #000;
+		flex-direction: column;
+		justify-content: flex-start;
+		transition: height 2s cubic-bezier(0.19, 1, 0.22, 1),
+			background-color 0.3s;
+	}
+
+	.nav-menu {
+		display: flex;
+		position: fixed;
+		top: 50px;
+		right: 0;
+	}
+
+	.show-menu .nav-menu {
+		height: 100%;
+	}
+
+	.nav-menu a {
+		font-size: 18px;
+		height: 0;
+		width: 0;
+		opacity: 0;
+		overflow: hidden;
+		padding-left: 50px;
+		transition: opacity 1.5s, height 2s;
+	}
+
+	.show-menu .nav-menu a {
+		opacity: 1;
+		width: auto;
+		height: auto;
+	}
+
+	.show-menu .fa-plus {
+		display: inline-block;
+		font-size: 12px;
+		padding-right: 26px;
+	}
+
+	.show-menu .fa-angle-down {
+		display: inline-block;
+		padding: 10px 10px 5px 10px;
+	}
+
+	/* sub menu */
+	.submenu-btn {
+		cursor: pointer;
+	}
+
+	.nav-submenu {
+		display: none;
+		height: auto;
+	}
+
+	.show-sub {
+		display: flex;
+	}
+
+	.show-sub .nav-subitem {
+		height: 40px;
+		padding-left: 65px;
+		color: #676767;
+		border-left: 5px solid #000;
+		line-height: 40px;
+	}
+
+	/* sub menu animations */
+	.rotate-x {
+		transform: rotate(45deg);
+		padding: 19px;
+	}
+
+	.flip-up {
+		transform: rotate(180deg);
+	}
+
+	/* Order of navbar elements */
+	.nav-menu-btn {
+		order: 1;
+		display: grid;
+	}
+
+	.logo {
+		order: 2;
+	}
+
+	.nav-icons {
+		order: 3;
+	}
+}
+
+/* Left side border colors in NavMenu Items  */
+#talent {
+	border-left: 5px solid #4ec5ee;
+}
+
+#connections {
+	border-left: 5px solid #ec357a;
+}
+
+#intelligence {
+	border-left: 5px solid #f87907;
+}
+
+#workspace {
+	border-left: 5px solid #8802e6;
+}
+
+#insights {
+	border-left: 5px solid #7bc148;
+}
+
+#johhny {
+	color: #676767;
+	border-left: 5px solid #676767;
+}
